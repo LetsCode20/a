@@ -1,0 +1,190 @@
+{
+    "men": {
+      "id": 1,
+      "title": "Men",
+      "routName": "men",
+      "items": [
+        {
+          "id": 1,
+          "title": "Long Sleeve 3D Printed Black Cat Sweatshirt",
+          "price": 55,
+          "description": "This 3D printed Black Cat Sweatshirt is perfect for all the cat lover.",
+          "category": "men",
+          "image": "https://i.ibb.co/cQXDVH4/product-men-1.png"
+        },
+        {
+          "id": 2,
+          "title": "Rainbow Mushroom Hoodie",
+          "price": 75,
+          "description": "This Unisex Rainbow Mushroom hoodie has a hidden secret. Did you know that eating rainbow mushroom has been considered as a key to achieve a healthy life. Rainbow mushroom, also known as “glass parasol”, is one of the most beautiful and rarest mushroom species in the world.",
+          "category": "men",
+          "image": "https://i.ibb.co/LZmTZ6c/product-men-2.png"
+        },
+        {
+          "id": 3,
+          "title": "Tee shirt - \"Ninja Eyes\"",
+          "price": 35,
+          "description": "Feel comfortable and powerful while rocking this Ninja Eyes Tee shirt. Let that Ninja in you FREE.",
+          "category": "men",
+          "image": "https://i.ibb.co/9T2gfgh/product-men-3.png"
+        },
+        {
+          "id": 4,
+          "title": "CYCOLOGIST Sports Hoodie",
+          "price": 55,
+          "description": "In love with your bike? Show the world by wearing this unisex sporty \"CYCOLOGIST\" hoodie.",
+          "category": "men",
+          "image": "https://i.ibb.co/R7B1mXt/product-men-4.png"
+        },
+        {
+          "id": 5,
+          "title": "Army Camouflage Waterproof Jacket",
+          "price": 175,
+          "description": "Keep yourself warm during the winter season with this military style Army Camouflage Waterproof Jacket.",
+          "category": "men",
+          "image": "https://i.ibb.co/QfqsRP4/product-men-5.webp"
+        }
+      ]
+    },
+    "accessories": {
+      "id": 2,
+      "title": "Accessories",
+      "routName": "accessories",
+      "items": [
+        {
+          "id": 6,
+          "title": "Walnut Wooden Watch",
+          "price": 98,
+          "description": "Get the perfect wooden watch for yourself or a loved one - including a unique engraving in the back! This classic piece will match any outfit.",
+          "category": "accessories",
+          "image": "https://i.ibb.co/pbm5m4F/product-accessories-1.webp"
+        },
+        {
+          "id": 7,
+          "title": "Aroma Therapy Essential Oils Diffuser Necklace/ Locket/ Pendant",
+          "price": 20,
+          "description": "Get your Aroma Therapy Essential Oils Diffuser Necklace/ Locket/ Pendant.",
+          "category": "accessories",
+          "image": "https://i.ibb.co/cJypyr6/product-accessories-2.png"
+        },
+        {
+          "id": 8,
+          "title": "Inverness Watch",
+          "price": 124.99,
+          "description": "Get this unique and beautifully designed wooden watch for your inner nature lover!",
+          "category": "accessories",
+          "image": "https://i.ibb.co/pbfyVZN/product-accessories-3.webp"
+        },
+        {
+          "id": 9,
+          "title": "Rose Gold Quartz Watch",
+          "price": 10.99,
+          "description": "Top off your elegant evening outfit with this classic rose gold quartz watch or wear it to your casual jeans and shirt combination - it will look stunning either way!",
+          "category": "accessories",
+          "image": "https://i.ibb.co/vPqjYMm/product-accessories-4.webp"
+        },
+        {
+          "id": 10,
+          "title": "Boho Starfish Turtle Anklet",
+          "price": 34.99,
+          "description": "Catapult yourself into the summer wearing this beach inspired bohemian starfish anklet with a cute little turtle!",
+          "category": "accessories",
+          "image": "https://i.ibb.co/7JQc3SS/product-accessories-5.webp"
+        }
+      ]
+    },
+    "kids": {
+      "id": 3,
+      "title": "Kids",
+      "routName": "kids",
+      "items": [
+        {
+          "id": 11,
+          "title": "Unisex Baby Long Sleeve Bodysuits Set",
+          "price": 35,
+          "description": "Kids grow up so fast. Your little one may still be an infant, but we're sure they're crying for something stylish, comfortable, and eco-friendly. Well, you can satisfy their \"demands\" with this practical, organic Unisex Baby Long Sleeve Bodysuits Set.",
+          "category": "kids",
+          "image": "https://i.ibb.co/3CLZNyL/product-kids-1.webp"
+        },
+        {
+          "id": 12,
+          "title": "Believe Baby Bodysuit",
+          "price": 35,
+          "description": "Dress your little one with one of these cute baby Bodysuit !Baby Bodysuit with phrase \"Believe\"",
+          "category": "kids",
+          "image": "https://i.ibb.co/1nWcQGt/product-kids-2.webp"
+        },
+        {
+          "id": 13,
+          "title": "Girl Sleeveless Romper Jumpsuit",
+          "price": 35,
+          "description": "Your daughter will look adorable in this sleeveless romper jumpsuit.",
+          "category": "kids",
+          "image": "https://i.ibb.co/LgttRyY/product-kids-3.webp"
+        },
+        {
+          "id": 14,
+          "title": "Happy Holidays (Mittens) Baby Bodysuit",
+          "price": 35,
+          "description": "Dress your little one with this cute baby Bodysuit ! Baby Bodysuit With phrase \"Happy Holidays\"",
+          "category": "kids",
+          "image": "https://i.ibb.co/LgttRyY/product-kids-4.webp"
+        },
+        {
+          "id": 15,
+          "title": "Its the Most Wonderful Time of the Year",
+          "price": 35,
+          "description": "Dress your little one with this cute baby Bodysuit ! Baby Bodysuit With phrase \"Its The Most Wonderful Time of the year\"",
+          "category": "kids",
+          "image": "https://i.ibb.co/sQB1LkD/product-kids-5.webp"
+        }
+      ]
+    },
+    "women": {
+      "id": 4,
+      "title": "Women",
+      "routName": "women",
+      "items": [
+        {
+          "id": 16,
+          "title": "Maxi Dress Boho Elegant",
+          "price": 45,
+          "description": "You will love this Maxi Dress Boho Elegant .  You can wear belt, and coat to match.",
+          "category": "women",
+          "image": "https://i.ibb.co/KLg1mnS/product-women-1.webp"
+        },
+        {
+          "id": 17,
+          "title": "Arden Distressed Skinny Jeans",
+          "price": 55,
+          "description": "Look no further for your next go-to denim in our Arden Distressed Skinny Jeans. Featuring a distressing detailing throughout, dark-wash with slight fading and mid-rise waist.",
+          "category": "women",
+          "image": "https://i.ibb.co/J3TFgy0/product-women-2.webp"
+        },
+        {
+          "id": 18,
+          "title": "Casual Off-Shoulder Knitted Sweater Dress",
+          "price": 55,
+          "description": "Mirror mirror on the wall, who is the prettiest of them all? Wear this casual off-shoulder knitted sweater dress and you will be the star of the day.",
+          "category": "women",
+          "image": "https://i.ibb.co/vxvLStr/product-women-3.webp"
+        },
+        {
+          "id": 19,
+          "title": "Open Front Pocket Cardigan",
+          "price": 45,
+          "description": "Stay cozy yet classy and elegant with this best selling open cardigan. It features rib detail and two side pockets. Pair it with your favorite jeans to work or school or simply to go out. It's super versatile and the perfect add-on to your wardrobe!",
+          "category": "women",
+          "image": "https://i.ibb.co/pjZzj5W/product-women-4.webp"
+        },
+        {
+          "id": 20,
+          "title": "Plus Size Short Sleeve Long V-Neck Dress",
+          "price": 65,
+          "description": "This casual yet fashionable short sleeve long v-neck dress is perfect for an everyday outfit.  Pair along with your favorite sandals/wedges for a stylish look.",
+          "category": "women",
+          "image": "https://i.ibb.co/FWdLZdK/product-women-5.webp"
+        }
+      ]
+    }
+}
