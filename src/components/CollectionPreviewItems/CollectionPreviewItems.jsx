@@ -8,17 +8,20 @@ import {
   CollectionPreviewItemInformation,
 } from './CollectionPreviewItems.style';
 
-const CollectionPreviewItems = ({ image, title, price }) => {
+const CollectionPreviewItems = ({ id, image, title, price }) => {
   return (
     <CollectionPreviewItemContainer>
       <CollectionPreviewItemImg src={image} alt={image} />
+
       <CollectionPreviewItemInformation>
         <p>{title}</p>
         <span>${price}</span>
       </CollectionPreviewItemInformation>
+
       <CollectionPreviewItemButton>
         <button>Add to Cart</button>
       </CollectionPreviewItemButton>
+
       <CollectionPreviewItemHearth>
         <Ai.AiFillHeart />
       </CollectionPreviewItemHearth>

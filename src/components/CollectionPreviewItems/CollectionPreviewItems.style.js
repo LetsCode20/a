@@ -47,6 +47,10 @@ export const CollectionPreviewItemButton = styled.div`
     display: none;
     transition: all 0.3s ease-in;
 
+    @media screen and (max-width: ${breakpoints.medium}) {
+      width: 220px;
+    }
+
     &:hover {
       background-color: rgba(0, 0, 0, 0.7);
       border: 1px solid #fff;

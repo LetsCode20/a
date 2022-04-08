@@ -3,22 +3,21 @@ import CollectionPreviewItems from '../CollectionPreviewItems/CollectionPreviewI
 import Title from '../Title/Title';
 import { CollectionPreviewContainer } from './CollectionPreview.style';
 
-const CollectionPreview = ({ title, route, items }) => {
+const CollectionPreview = ({ title, items }) => {
   return (
     <div>
-      <Title route={route} title={title} />
+      <Title title={title} />
 
       <CollectionPreviewContainer>
-        {items
-          .filter((_, idx) => idx < 4)
-          .map(({ id, image, title, price }) => (
-            <CollectionPreviewItems
-              key={id}
-              image={image}
-              title={title}
-              price={price}
-            />
-          ))}
+        {items.map(({ id, image, title, price }) => (
+          <CollectionPreviewItems
+            key={id}
+            id={id}
+            image={image}
+            title={title}
+            price={price}
+          />
+        ))}
       </CollectionPreviewContainer>
     </div>
   );

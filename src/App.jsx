@@ -9,6 +9,7 @@ import {
   NOTFOUNDROUTE,
   SHOPROUTE,
   SHOPCOLLECTIONROUTE,
+  FAVORITEROUTE,
 } from './navigation/CONSTANT';
 // Hooks
 import { useDarkMode } from './hooks/useDarkMode';
@@ -29,6 +30,8 @@ import Shop from './pages/Shop';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import CollectionItem from './components/CollectionItem/CollectionItem';
+import { getCollections } from './features/shop/shopSlice';
+import Favorite from './pages/Favorite';
 
 const App = () => {
   let navigate = useNavigate();
@@ -53,6 +56,10 @@ const App = () => {
     });
   }, [dispatch, navigate]);
 
+  useEffect(() => {
+    dispatch(getCollections());
+  }, [dispatch]);
+
   const [theme, themeToggler] = useDarkMode();
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
 
@@ -70,6 +77,7 @@ const App = () => {
           <Route path={SIGNINROUTE} element={<SignIn />} />
           <Route path={SHOPROUTE} element={<Shop />} />
           <Route path={SHOPCOLLECTIONROUTE} element={<CollectionItem />} />
+          <Route path={FAVORITEROUTE} element={<Favorite />} />
         </Routes>
       </Container>
 

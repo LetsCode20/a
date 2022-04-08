@@ -5,7 +5,7 @@ export const CollectionPreviewContainer = styled.div`
   display: grid;
   justify-content: space-around;
   grid-template-columns: repeat(4, 200px);
-  grid-column-gap: 20px;
+  grid-gap: 30px 20px;
   margin: 20px 0;
 
   @media screen and (max-width: ${breakpoints.medium}) {

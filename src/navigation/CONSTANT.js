@@ -12,7 +12,7 @@ export const FAVORITEROUTE = 'favorite';
 export const CHECKOUTROUTE = 'checkout';
 // Shop Route
 export const SHOPROUTE = 'shop';
-export const SHOPWOMENROUTE = 'shop/woman';
+export const SHOPWOMENROUTE = 'shop/women';
 export const SHOPMENROUTE = 'shop/men';
 export const SHOPKIDSROUTE = 'shop/kids';
 export const SHOPACCESSORIESROUTE = 'shop/accessories';
