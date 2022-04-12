@@ -20,18 +20,19 @@ import { darkTheme, lightTheme } from './styles/theme/theme';
 import ThemeSwitch from './components/ThemeSwitch/ThemeSwitch';
 import Home from './pages/Home/index';
 import NotFound from './navigation/NotFound';
-// Firebase
-import { auth } from './configs/FirebaseConfigs';
-// Redux
-import { loginUser } from './features/auth/authSlice';
 import Header from './components/Header/Header';
 import SignIn from './components/SignIn/SignIn';
 import Shop from './pages/Shop';
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from 'react-toastify';
-import CollectionItem from './components/CollectionItem/CollectionItem';
-import { getCollections } from './features/shop/shopSlice';
 import Favorite from './pages/Favorite';
+import CollectionItem from './components/CollectionItem/CollectionItem';
+// Firebase
+import { auth } from './configs/FirebaseConfigs';
+// Redux
+import { loginUser } from './redux/features/auth/authSlice';
+import { getCollections } from './redux/features/shop/shopSlice';
+// Toastify
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   let navigate = useNavigate();

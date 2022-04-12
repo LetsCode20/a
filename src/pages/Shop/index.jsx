@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { collections } from '../../features/shop/shopSlice';
+import { collections } from '../../redux/features/shop/shopSlice';
 import CollectionPreview from '../../components/CollectionPreview/CollectionPreview';
 
 const Shop = () => {

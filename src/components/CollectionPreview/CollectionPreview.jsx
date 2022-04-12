@@ -3,13 +3,13 @@ import CollectionPreviewItems from '../CollectionPreviewItems/CollectionPreviewI
 import Title from '../Title/Title';
 import { CollectionPreviewContainer } from './CollectionPreview.style';
 
-const CollectionPreview = ({ title, items }) => {
+const CollectionPreview = ({ title, collectionItems }) => {
   return (
     <div>
       <Title title={title} />
 
       <CollectionPreviewContainer>
-        {items.map(({ id, image, title, price }) => (
+        {collectionItems.map(({ id, image, title, price }) => (
           <CollectionPreviewItems
             key={id}
             id={id}

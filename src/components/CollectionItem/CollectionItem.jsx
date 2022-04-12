@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { collections } from '../../features/shop/shopSlice';
+import { collections } from '../../redux/features/shop/shopSlice';
 import CollectionPreview from '../CollectionPreview/CollectionPreview';
 
 const CollectionItem = () => {
@@ -16,7 +16,13 @@ const CollectionItem = () => {
           .map((key) => {
             const { id, title, items } = collection[key];
 
-            return <CollectionPreview key={id} title={title} items={items} />;
+            return (
+              <CollectionPreview
+                key={id}
+                title={title}
+                collectionItems={items}
+              />
+            );
           })
       )}
     </div>

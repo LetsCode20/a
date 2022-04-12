@@ -9,7 +9,7 @@ import {
   auth,
   currentUser,
   googleAuthProvider,
-} from '../../configs/FirebaseConfigs';
+} from '../../../configs/FirebaseConfigs';
 
 const initialState = {
   user: null,

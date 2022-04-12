@@ -9,7 +9,7 @@ import {
 import CustomLink from '../CustomLink/CustomLink';
 import { Menu, MenuBtn, Nav, NavItem, NavItems } from './Navbar.style';
 import UserButton from '../UserButton/UserButton';
-import { favoriteItems } from '../../features/favorite/favoriteSlice';
+import { favoriteItems } from '../../redux/features/favorite/favoriteSlice';
 import { useSelector } from 'react-redux';
 
 const Navbar = () => {

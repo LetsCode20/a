@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { getDocs } from 'firebase/firestore';
 import { toast } from 'react-toastify';
-import { collectionRef } from '../../configs/FirebaseConfigs';
+import { collectionRef } from '../../../configs/FirebaseConfigs';
 
 export const getCollections = createAsyncThunk(
   'shop/setCollections',

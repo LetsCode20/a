@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom';
 import {
   addItemToFavorite,
   removeItemFromFavorite,
-} from '../../features/favorite/favoriteSlice';
+} from '../../redux/features/favorite/favoriteSlice';
 import {
   CollectionPreviewItemButton,
   CollectionPreviewItemContainer,

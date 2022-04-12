@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { CollectionPreviewContainer } from '../../components/CollectionPreview/CollectionPreview.style';
 import CollectionPreviewItems from '../../components/CollectionPreviewItems/CollectionPreviewItems';
-import { favoriteItems } from '../../features/favorite/favoriteSlice';
+import { favoriteItems } from '../../redux/features/favorite/favoriteSlice';
 
 const Favorite = () => {
   const favoriteItem = useSelector(favoriteItems);

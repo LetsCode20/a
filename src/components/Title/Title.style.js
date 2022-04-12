@@ -6,9 +6,4 @@ export const CollectionTitle = styled.h3`
   font-size: 24px;
   text-align: center;
   margin-bottom: 40px;
-  transition: text-decoration 0.3s ease-in;
-
-  &:hover {
-    text-decoration: underline;
-  }
 `;
