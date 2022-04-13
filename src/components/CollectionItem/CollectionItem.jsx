@@ -16,13 +16,7 @@ const CollectionItem = () => {
           .map((key) => {
             const { id, title, items } = collection[key];
 
-            return (
-              <CollectionPreview
-                key={id}
-                title={title}
-                collectionItems={items}
-              />
-            );
+            return <CollectionPreview key={id} title={title} items={items} />;
           })
       )}
     </div>

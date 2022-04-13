@@ -2,6 +2,7 @@ import React from 'react';
 import * as Ai from 'react-icons/ai';
 import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
+import { addToCart } from '../../redux/features/cart/cartSlice';
 import {
   addItemToFavorite,
   removeItemFromFavorite,
@@ -26,7 +27,11 @@ const CollectionPreviewItems = ({ id, image, title, price }) => {
   };
 
   const removeFromFavorite = () => {
-    dispatch(removeItemFromFavorite(id));
+    dispatch(removeItemFromFavorite(product));
+  };
+
+  const addItemToCart = () => {
+    dispatch(addToCart(product));
   };
 
   return (
@@ -38,7 +43,7 @@ const CollectionPreviewItems = ({ id, image, title, price }) => {
         <span>${price}</span>
       </CollectionPreviewItemInformation>
 
-      <CollectionPreviewItemButton>
+      <CollectionPreviewItemButton onClick={addItemToCart}>
         <button>Add to Cart</button>
       </CollectionPreviewItemButton>
 

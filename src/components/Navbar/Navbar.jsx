@@ -7,13 +7,15 @@ import {
   SHOPROUTE,
 } from '../../navigation/CONSTANT';
 import CustomLink from '../CustomLink/CustomLink';
-import { Menu, MenuBtn, Nav, NavItem, NavItems } from './Navbar.style';
+import { Menu, Nav, NavItem, NavItems } from './Navbar.style';
 import UserButton from '../UserButton/UserButton';
-import { favoriteItems } from '../../redux/features/favorite/favoriteSlice';
+import { favoriteItemsLength } from '../../redux/features/favorite/favoriteSlice';
+import { cartItemsLength } from '../../redux/features/cart/cartSlice';
 import { useSelector } from 'react-redux';
 
 const Navbar = () => {
-  const favoriteItem = useSelector(favoriteItems);
+  const favoriteItemLen = useSelector(favoriteItemsLength);
+  const cartItemLen = useSelector(cartItemsLength);
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
@@ -34,14 +36,14 @@ const Navbar = () => {
         <NavItem>
           <CustomLink to={FAVORITEROUTE}>
             <Ai.AiOutlineHeart />
-            <span>{favoriteItem.length}</span>
+            <span>{favoriteItemLen}</span>
           </CustomLink>
         </NavItem>
 
         <NavItem>
           <CustomLink to={CHECKOUTROUTE}>
             <Ai.AiOutlineShopping />
-            <span>0</span>
+            <span>{cartItemLen}</span>
           </CustomLink>
         </NavItem>
 
@@ -49,7 +51,7 @@ const Navbar = () => {
       </NavItems>
 
       <Menu onClick={handleClick}>
-        <MenuBtn className={clicked ? 'open' : ''}></MenuBtn>
+        {clicked ? <Ai.AiOutlineClose /> : <Ai.AiOutlineMenu />}
       </Menu>
     </Nav>
   );

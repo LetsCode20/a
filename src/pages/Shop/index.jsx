@@ -12,6 +12,7 @@ const Shop = () => {
         Object.keys(collection).map((key) => {
           const { id, title, items } = collection[key];
           const filterItems = items.filter((_, idx) => idx < 4);
+
           return (
             <CollectionPreview key={id} title={title} items={filterItems} />
           );

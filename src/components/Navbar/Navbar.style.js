@@ -1,141 +1,109 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { breakpoints } from '../../styles/breakpoints/breakpoints';
-import { fontBold, fontMedium, fontSizeH2, tinyFontSize } from '../../styles/font/font';
+import {
+  fontBold,
+  fontMedium,
+  fontSizeH2,
+  tinyFontSize,
+} from '../../styles/font/font';
 
 export const Nav = styled.nav`
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 `;
 
 export const NavItems = styled.ul`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 
-    @media screen and (max-width: ${breakpoints.small}) {
-        display: none;
-        position: relative;
+  @media screen and (max-width: ${breakpoints.small}) {
+    display: none;
+    position: relative;
 
-        &.active {
-            width: 100%;
-            position: absolute;
-            top: 70px;
-            left: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-evenly;
-            height: 400px;
-            transform: translateX(-50%);
-            background-color: ${({ theme }) => theme.colors.navback};
-            transition: all 0.3s linear;
-        }
+    &.active {
+      width: 100%;
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 400px;
+      transform: translateX(-50%);
+      background-color: ${({ theme }) => theme.colors.navback};
+      transition: all 0.3s linear;
     }
+  }
 `;
 
 export const NavItem = styled.li`
-    margin: 0 20px;
-    text-transform: capitalize;
-    transition: all 0.3s linear;
+  margin: 0 20px;
+  text-transform: capitalize;
+  transition: all 0.3s linear;
 
-    & svg {
-        font-size: ${fontSizeH2};
-    }
+  & svg {
+    font-size: ${fontSizeH2};
+  }
 
-    & span {
-        background-color: ${({ theme }) => theme.colors.redColor};
-        color: #fff;
-        text-align: center;
-        padding: 0 3px;
-        border-radius: 50px;
-        font-size: ${tinyFontSize};
-        font-weight: ${fontBold};
-        margin-left: -7px;
-    }
+  & span {
+    background-color: ${({ theme }) => theme.colors.redColor};
+    color: #fff;
+    text-align: center;
+    padding: 0 3px;
+    border-radius: 50px;
+    font-size: ${tinyFontSize};
+    font-weight: ${fontBold};
+    margin-left: -7px;
+  }
 `;
 
 export const NavItemLink = styled(Link)`
-    color: ${({ theme }) => theme.colors.containerColor};
-    transition: color 0.2s ease-in;
-    position: relative;
+  color: ${({ theme }) => theme.colors.containerColor};
+  transition: color 0.2s ease-in;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 1px;
+    width: 0%;
+    background-color: ${({ theme }) => theme.colors.primary};
+    transition: all 0.3s ease-in;
+  }
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
 
     &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -10px;
-        height: 1px;
-        width: 0%;
-        background-color: ${({ theme }) => theme.colors.primary};
-        transition: all 0.3s ease-in;
+      width: 100%;
     }
+  }
 
-    &:hover {
-        color: ${({ theme }) => theme.colors.primary};
+  &.active {
+    color: ${({ theme }) => theme.colors.primary};
+    font-weight: ${fontMedium};
 
-        &::after {
-            width: 100%;
-        }
+    &::after {
+      width: 100%;
     }
-
-    &.active {
-        color: ${({ theme }) => theme.colors.primary};
-        font-weight: ${fontMedium};
-
-        &::after {
-            width: 100%;
-        }
-    }
+  }
 `;
 
 export const Menu = styled.div`
-    position: relative;
-    display: none;
+  display: none;
 
-    @media screen and (max-width: ${breakpoints.small}) {
-        display: block;
-    }
+  @media screen and (max-width: ${breakpoints.small}) {
+    display: block;
+  }
 `;
 
 export const MenuBtn = styled.div`
-    width: 20px;
-    height: 2px;
-    border-radius: 5px;
-    background-color: ${({ theme }) => theme.colors.primary};
-    transition: all 0.3s ease-in;
-    cursor: pointer;
-
-    &::after,
-    &::before {
-        content: '';
-        position: absolute;
-        width: 20px;
-        height: 2px;
-        background-color: ${({ theme }) => theme.colors.primary};
-        border-radius: 5px;
-    }
-
-    &::after {
-        transform: translateY(-6px);
-    }
-
-    &::before {
-        transform: translateY(6px);
-    }
-
-    &.open {
-        background-color: transparent;
-        transform: rotate(0);
-        transition: transform 0.3s linear;
-
-        &::after {
-            transform: rotate(45deg);
-        }
-
-        &::before {
-            transform: rotate(-45deg);
-        }
-    }
+  cursor: pointer;
+  font-size: 18px;
 `;

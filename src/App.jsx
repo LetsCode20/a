@@ -10,20 +10,23 @@ import {
   SHOPROUTE,
   SHOPCOLLECTIONROUTE,
   FAVORITEROUTE,
+  CHECKOUTROUTE,
 } from './navigation/CONSTANT';
+import NotFound from './navigation/NotFound';
 // Hooks
 import { useDarkMode } from './hooks/useDarkMode';
 // Styles
 import GlobalStyle, { Container } from './styles/GlobalStyle.style';
 import { darkTheme, lightTheme } from './styles/theme/theme';
+// Pages
+import Home from './pages/Home/index';
+import Shop from './pages/Shop/index';
+import Favorite from './pages/Favorite/index';
+import Cart from './pages/Cart/index';
 // Components
 import ThemeSwitch from './components/ThemeSwitch/ThemeSwitch';
-import Home from './pages/Home/index';
-import NotFound from './navigation/NotFound';
 import Header from './components/Header/Header';
 import SignIn from './components/SignIn/SignIn';
-import Shop from './pages/Shop';
-import Favorite from './pages/Favorite';
 import CollectionItem from './components/CollectionItem/CollectionItem';
 // Firebase
 import { auth } from './configs/FirebaseConfigs';
@@ -77,8 +80,9 @@ const App = () => {
           <Route path={HOMEROUTE} element={<Home />} />
           <Route path={SIGNINROUTE} element={<SignIn />} />
           <Route path={SHOPROUTE} element={<Shop />} />
-          <Route path={SHOPCOLLECTIONROUTE} element={<CollectionItem />} />
           <Route path={FAVORITEROUTE} element={<Favorite />} />
+          <Route path={SHOPCOLLECTIONROUTE} element={<CollectionItem />} />
+          <Route path={CHECKOUTROUTE} element={<Cart />} />
         </Routes>
       </Container>
 
