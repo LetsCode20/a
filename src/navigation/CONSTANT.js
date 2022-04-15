@@ -5,7 +5,6 @@ export const HOMEROUTE = '/';
 // Login
 export const SIGNINROUTE = 'signin';
 // Contact
-export const CONTACTROUTE = 'contact';
 // Favorite Route
 export const FAVORITEROUTE = 'favorite';
 // Checkout Route

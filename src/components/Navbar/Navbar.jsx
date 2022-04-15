@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import * as Ai from 'react-icons/ai';
 import {
   CHECKOUTROUTE,
-  CONTACTROUTE,
   FAVORITEROUTE,
   SHOPROUTE,
 } from '../../navigation/CONSTANT';
@@ -27,10 +26,6 @@ const Navbar = () => {
       <NavItems className={clicked ? 'active' : ''}>
         <NavItem>
           <CustomLink to={SHOPROUTE}>Collections</CustomLink>
-        </NavItem>
-
-        <NavItem>
-          <CustomLink to={CONTACTROUTE}>Contact</CustomLink>
         </NavItem>
 
         <NavItem>

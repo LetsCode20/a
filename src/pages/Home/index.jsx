@@ -2,7 +2,7 @@ import React from 'react';
 import HomeLanding from '../../components/HomeLanding/HomeLanding';
 
 const Home = () => {
-    return <HomeLanding />;
+  return <HomeLanding />;
 };
 
 export default Home;

@@ -19,7 +19,7 @@ export const authSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
-    setUser: (state, { payload }) => {
+    addUser: (state, { payload }) => {
       state.user = payload;
     },
     resetUser: (state) => {
@@ -28,10 +28,9 @@ export const authSlice = createSlice({
   },
 });
 
-export const { setUser, resetUser } = authSlice.actions;
+export const { addUser, resetUser } = authSlice.actions;
 
 export const selectUser = (state) => state.user.user;
-export const isLoading = (state) => state.isLoading;
 
 export const registerInitiate =
   (email, password, displayName) => (dispatch) => {
@@ -41,7 +40,6 @@ export const registerInitiate =
           .then((user) => {
             const data = {
               id: user.user.uid,
-              displayName: displayName,
               email: user.user.email,
               phoneNumber: user.user.phoneNumber,
               photoURL: user.user.photoURL,
@@ -49,9 +47,9 @@ export const registerInitiate =
 
             dispatch(loginUser(data));
           })
-          .catch((error) => console.error(error));
+          .catch((error) => console.log(error));
       })
-      .catch((error) => console.error(error));
+      .catch((error) => console.log(error));
   };
 
 export const loginInitiate = (email, password) => (dispatch) => {
@@ -59,7 +57,6 @@ export const loginInitiate = (email, password) => (dispatch) => {
     .then((user) => {
       const data = {
         id: user.user.uid,
-        displayName: user.user.displayName,
         email: user.user.email,
         phoneNumber: user.user.phoneNumber,
         photoURL: user.user.photoURL,
@@ -67,7 +64,7 @@ export const loginInitiate = (email, password) => (dispatch) => {
 
       dispatch(loginUser(data));
     })
-    .catch((err) => console.error(err));
+    .catch((error) => console.log(error));
 };
 
 export const signInWithGoogleInitiate = () => (dispatch) => {
@@ -83,7 +80,7 @@ export const signInWithGoogleInitiate = () => (dispatch) => {
 
       dispatch(loginUser(data));
     })
-    .catch((err) => console.error(err));
+    .catch((error) => console.log(error));
 };
 
 export const logoutInitiate = () => (dispatch) => {
@@ -92,7 +89,7 @@ export const logoutInitiate = () => (dispatch) => {
 };
 
 export const loginUser = (data) => (dispatch) => {
-  dispatch(setUser(data));
+  dispatch(addUser(data));
 };
 
 export const logoutUser = () => (dispatch) => {
