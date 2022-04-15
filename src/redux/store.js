@@ -15,13 +15,13 @@ import authReducer from './features/auth/authSlice';
 import directoryReducer from './features/directory/directorySlice';
 import shopReducer from './features/shop/shopSlice';
 import favoriteReducer from './features/favorite/favoriteSlice';
-import cartReducer from './features/cart/cartSlice';
+import checkoutReducer from './features/checkout/checkoutSlice';
 
 const persistConfig = {
   key: 'root',
   version: 1,
   storage,
-  whitelist: ['cart', 'favorite'],
+  whitelist: ['checkout', 'favorite'],
 };
 
 const reducers = combineReducers({
@@ -29,7 +29,7 @@ const reducers = combineReducers({
   directory: directoryReducer,
   shop: shopReducer,
   favorite: favoriteReducer,
-  cart: cartReducer,
+  checkout: checkoutReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, reducers);

@@ -8,25 +8,48 @@ import {
   QuantityContainer,
   RemoveButtonContainer,
 } from './CheckoutItems.style';
+import { useDispatch } from 'react-redux';
+import {
+  removeFromCart,
+  decreaseCart,
+  addToCart,
+} from '../../redux/features/checkout/checkoutSlice';
 
 const CheckoutItems = ({ id, imageUrl, title, quantity, price }) => {
+  const product = { id, imageUrl, title, quantity, price };
+  const priceTotal = price * quantity;
+  const priceTotalFixed = priceTotal.toFixed(2);
+  const dispatch = useDispatch();
+
+  const handleDecreaseCart = () => {
+    dispatch(decreaseCart(product));
+  };
+
+  const handleIncreaseCart = () => {
+    dispatch(addToCart(product));
+  };
+
+  const handleRemove = () => {
+    dispatch(removeFromCart(product));
+  };
+
   return (
-    <CheckoutItemcontainer id={id}>
+    <CheckoutItemcontainer>
       <ImageContainer
         style={{ backgroundImage: `url(${imageUrl})` }}
       ></ImageContainer>
       <TextContainer>{title}</TextContainer>
       <QuantityContainer>
-        <div>
+        <div onClick={handleDecreaseCart}>
           <Io.IoIosArrowBack />
         </div>
         <span>{quantity}</span>
-        <div>
+        <div onClick={handleIncreaseCart}>
           <Io.IoIosArrowForward />
         </div>
       </QuantityContainer>
-      <TextContainer>${price}</TextContainer>
-      <RemoveButtonContainer>
+      <TextContainer>${priceTotalFixed}</TextContainer>
+      <RemoveButtonContainer onClick={() => handleRemove()}>
         <Ai.AiOutlineClose />
       </RemoveButtonContainer>
     </CheckoutItemcontainer>

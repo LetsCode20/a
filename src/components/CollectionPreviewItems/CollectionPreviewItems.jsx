@@ -2,7 +2,7 @@ import React from 'react';
 import * as Ai from 'react-icons/ai';
 import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
-import { addToCart } from '../../redux/features/cart/cartSlice';
+import { addToCart } from '../../redux/features/checkout/checkoutSlice';
 import {
   addItemToFavorite,
   removeItemFromFavorite,

@@ -10,7 +10,7 @@ import CustomLink from '../CustomLink/CustomLink';
 import { Menu, Nav, NavItem, NavItems } from './Navbar.style';
 import UserButton from '../UserButton/UserButton';
 import { favoriteItemsLength } from '../../redux/features/favorite/favoriteSlice';
-import { cartItemsLength } from '../../redux/features/cart/cartSlice';
+import { cartItemsLength } from '../../redux/features/checkout/checkoutSlice';
 import { useSelector } from 'react-redux';
 
 const Navbar = () => {

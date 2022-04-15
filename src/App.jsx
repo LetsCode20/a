@@ -22,7 +22,7 @@ import { darkTheme, lightTheme } from './styles/theme/theme';
 import Home from './pages/Home/index';
 import Shop from './pages/Shop/index';
 import Favorite from './pages/Favorite/index';
-import Cart from './pages/Cart/index';
+import Cart from './pages/Checkout/index';
 // Components
 import ThemeSwitch from './components/ThemeSwitch/ThemeSwitch';
 import Header from './components/Header/Header';
