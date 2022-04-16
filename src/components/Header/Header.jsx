@@ -5,17 +5,17 @@ import Navbar from '../Navbar/Navbar';
 import { HeaderContainer, HeaderLogo, HeaderLogoTitle } from './Header.style';
 
 const Header = () => {
-    return (
-        <HeaderContainer>
-            <HeaderLogo>
-                <HeaderLogoTitle>
-                    <Link to={HOMEROUTE}>myStore</Link>
-                </HeaderLogoTitle>
-            </HeaderLogo>
+  return (
+    <HeaderContainer>
+      <HeaderLogo>
+        <Link to={HOMEROUTE}>
+          <HeaderLogoTitle>myStore</HeaderLogoTitle>
+        </Link>
+      </HeaderLogo>
 
-            <Navbar />
-        </HeaderContainer>
-    );
+      <Navbar />
+    </HeaderContainer>
+  );
 };
 
 export default Header;

@@ -44,7 +44,6 @@ const App = () => {
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user === null) {
-        // user is not logged in
         return;
       }
 

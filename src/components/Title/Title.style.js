@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import { fontSemiBold } from '../../styles/font/font';
 
 export const CollectionTitle = styled.h3`
-  font-weight: ${fontSemiBold};
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: ${({ theme }) => theme.colors.tertiary};
 `;

@@ -10,10 +10,11 @@ import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner';
 const Shop = () => {
   const dataCollections = useSelector(collections);
   const status = useSelector(statusCollections);
+  const isLoading = status === 'loading';
 
   return (
     <div>
-      {status === 'loading' ? (
+      {isLoading ? (
         <LoadingSpinner />
       ) : (
         dataCollections.map((collection) =>
